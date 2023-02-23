@@ -21,6 +21,7 @@ public class Segment {
     public Segment(Point start, Point end) {
         this.start = start;
         this.end = end;
+        this.color = 255 + "," + 0 + "," + 0 + "," + 0;
     }
 
     public void setStart(Point start) {

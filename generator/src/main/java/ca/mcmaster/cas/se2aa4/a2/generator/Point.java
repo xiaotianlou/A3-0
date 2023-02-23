@@ -5,7 +5,6 @@ import java.util.Objects;
 public class Point {
     private double x;
     private double y;
-    private String color;
     private double thickness=3;
     public double getThickness() {
         return thickness;
@@ -14,6 +13,8 @@ public class Point {
     public void setThickness(double thickness) {
         this.thickness = thickness;
     }
+
+    private String color=255 + "," + 0 + "," + 0;
 
 
     public Point(double x, double y) {

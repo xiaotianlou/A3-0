@@ -25,6 +25,7 @@ public class Polygon {
     public Polygon(List<Point> vertices) {
         this.vertices = new ArrayList<>(vertices);
         this.segments = new ArrayList<>();
+        this.centroid = new Point(0,0);
         for (int i = 0; i < vertices.size(); i++) {
             Point start = vertices.get(i);
             Point end = vertices.get((i + 1) % vertices.size());
@@ -51,7 +52,7 @@ public class Polygon {
         return neighbors;
     }
 
-    public Point getCentroidIndex() {
+    public Point getCentroid() {
         double sumX = 0;
         double sumY = 0;
 
@@ -63,14 +64,7 @@ public class Polygon {
 
         centroid.setX(sumX / vertices.size());
         centroid.setY(sumY / vertices.size());
-
-//        for (int i = 0; i < vertices.size(); i++) {
-//            Point vertex = vertices.get(i);
-//            if (vertex.getX() == avgX && vertex.getY() == avgY) {
-//                return i;
-//            }
-//        }
-
+        centroid.setColor(255 + "," + 0 + "," + 0 + "," + 0);
         return centroid;
     }
 
