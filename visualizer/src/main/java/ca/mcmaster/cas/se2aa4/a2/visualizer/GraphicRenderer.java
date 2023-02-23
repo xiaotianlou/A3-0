@@ -22,9 +22,6 @@ public class GraphicRenderer {
         Stroke stroke = new BasicStroke(0.5f);
         canvas.setStroke(stroke);
 
-
-
-
         for (Vertex v : aMesh.getVerticesList()) { //for vertex
             double centre_x = v.getX() - (THICKNESS / 2.0d);
             double centre_y = v.getY() - (THICKNESS / 2.0d);
@@ -34,32 +31,25 @@ public class GraphicRenderer {
             canvas.fill(point);
             canvas.setColor(old);
         }
-
-
         Set<Segment> drawLines = new HashSet<Segment>(aMesh.getSegmentsList());
-        for(Structs.Polygon p :aMesh.getPolygonsList()){
-            for(p.getS){
 
-
-            }
-        }
         //poly颜色处理
         //邻居连接
-
         for (Segment line : drawLines) { // parsing for individual segments
             canvas.setColor(Color.BLACK);
             canvas.setStroke(stroke);
             canvas.setColor(extractColor(line.getPropertiesList()));
             canvas.draw(new Line2D.Double(aMesh.getVerticesList().get(line.getV1Idx()).getX(),aMesh.getVerticesList().get(line.getV1Idx()).getY(),aMesh.getVerticesList().get(line.getV2Idx()).getX(), aMesh.getVerticesList().get(line.getV2Idx()).getY()));
         }
-
         // parsing for  polygon
+    }
 
-
-
+    public void render_debug(Mesh aMesh, Graphics2D canvas) {
 
 
     }
+
+
 
     private Color extractColor(List<Property> properties) {
         String val = null;
