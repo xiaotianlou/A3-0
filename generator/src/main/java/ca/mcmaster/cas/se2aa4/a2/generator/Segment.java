@@ -7,6 +7,17 @@ public class Segment {
     private Point end;
     private String color;
 
+    private double thickness=3;
+    public double getThickness() {
+        return thickness;
+    }
+
+    public void setThickness(double thickness) {
+        this.thickness = thickness;
+    }
+
+
+
     public Segment(Point start, Point end) {
         this.start = start;
         this.end = end;

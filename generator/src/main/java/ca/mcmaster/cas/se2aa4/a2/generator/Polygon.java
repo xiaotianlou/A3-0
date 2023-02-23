@@ -11,6 +11,15 @@ public class Polygon {
     private List<Segment> segments;
     private Set<Integer> neighbors;
     private Point centroid;
+    private double thickness=3;
+    public double getThickness() {
+        return thickness;
+    }
+
+    public void setThickness(double thickness) {
+        this.thickness = thickness;
+    }
+
 
     public Polygon(List<Point> vertices) {
         this.vertices = new ArrayList<>(vertices);
