@@ -9,6 +9,7 @@ import java.util.Set;
 public class Polygon {
     private List<Point> vertices;
     private List<Segment> segments;
+//    private String colour;
     private Set<Integer> neighbors;
     private Point centroid;
     private double thickness=3;
