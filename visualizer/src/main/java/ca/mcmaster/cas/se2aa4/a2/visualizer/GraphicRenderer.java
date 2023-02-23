@@ -1,5 +1,6 @@
 package ca.mcmaster.cas.se2aa4.a2.visualizer;
 
+import ca.mcmaster.cas.se2aa4.a2.io.Structs;
 import ca.mcmaster.cas.se2aa4.a2.io.Structs.Mesh;
 import ca.mcmaster.cas.se2aa4.a2.io.Structs.Property;
 import ca.mcmaster.cas.se2aa4.a2.io.Structs.Segment;
@@ -18,7 +19,7 @@ public class GraphicRenderer {
         canvas.setColor(Color.BLACK);
         Stroke stroke = new BasicStroke(0.5f);
         canvas.setStroke(stroke);
-        for (Vertex v : aMesh.getVerticesList()) {
+        for (Vertex v : aMesh.getVerticesList()) { //for vertex
             double centre_x = v.getX() - (THICKNESS / 2.0d);
             double centre_y = v.getY() - (THICKNESS / 2.0d);
             Color old = canvas.getColor();
@@ -28,14 +29,26 @@ public class GraphicRenderer {
             canvas.setColor(old);
         }
 
-        for (Segment line : aMesh.getSegmentsList()) {
+        for (Segment line : aMesh.getSegmentsList()) { // for segments
             canvas.setColor(Color.BLACK);
             canvas.setStroke(stroke);
 
             canvas.setColor(extractColor(line.getPropertiesList()));
-
             canvas.draw(new Line2D.Double(aMesh.getVerticesList().get(line.getV1Idx()).getX(),aMesh.getVerticesList().get(line.getV1Idx()).getY(),aMesh.getVerticesList().get(line.getV2Idx()).getX(), aMesh.getVerticesList().get(line.getV2Idx()).getY()));
         }
+
+        // for  polygon
+
+        for(Structs.Polygon p :aMesh.getPolygonsList()){
+
+
+
+
+
+
+        }
+
+
 
 
     }
