@@ -58,8 +58,6 @@ public class DotGen {
                 line_color=cal_color(v_list.get(findVertex(v_list,x,y+square_size)),v_list.get(findVertex(v_list,x+square_size,y+square_size)));
                 segments.add(Segment.newBuilder().setV1Idx(findVertex(v_list,x,y+square_size)).setV2Idx(findVertex(v_list,x+square_size,y+square_size)).addProperties(line_color).build());
 
-
-
             }
         }
 
