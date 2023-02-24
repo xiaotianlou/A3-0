@@ -63,8 +63,11 @@ When you develop features and enrich the product, remember that you have first t
 
 ### Product Backlog
 
-| Id | Feature title | Who? | Start | End | Status |
-|:--:|---------------|------|-------|-----|--------|
-|    |               |      |       |     |        |
+| Id |           Feature title              |     Who?    |    Start    |     End     | Status |
+|:--:|--------------------------------------|-------------|-------------|-------------|--------|
+|F01 |            Color segments            | Changhao Wu | Feb 18 2023 | Feb 19 2023 |    D   |
+|F02 |             Sort vertex              | Changhao Wu | Feb 21 2023 | Feb 21 2023 |    D   |
+|F03 |  No duplicated vertices and segments | Changhao Wu | Feb 21 2023 | Feb 21 2023 |    D   |
+|F04 |         Polygon with Centroid        | Changhao Wu | Feb 21 2023 | Feb 21 2023 |    D   |
 
 

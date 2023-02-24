@@ -29,10 +29,15 @@ public class GraphicRenderer {
             canvas.fill(point);
             canvas.setColor(old);
         }
+        System.out.println("!!!!!!!!!!!!!!!!!!!");
 
-        for(Segment line:aMesh.getSegmentsList()){
-            canvas.setColor(extractColor(line.getPropertiesList()));
-            canvas.draw(new Line2D.Double(aMesh.getVerticesList().get(line.getV1Idx()).getX(), aMesh.getVerticesList().get(line.getV1Idx()).getY(), aMesh.getVerticesList().get(line.getV2Idx()).getX(), aMesh.getVerticesList().get(line.getV2Idx()).getY()));
+        for(Segment s:aMesh.getSegmentsList()){
+            canvas.setColor(extractColor(s.getPropertiesList()));
+            canvas.draw(new Line2D.Double(
+                    aMesh.getVerticesList().get(s.getV1Idx()).getX(),
+                    aMesh.getVerticesList().get(s.getV1Idx()).getY(),
+                    aMesh.getVerticesList().get(s.getV2Idx()).getX(),
+                    aMesh.getVerticesList().get(s.getV2Idx()).getY()));
         }
         
     }
@@ -53,5 +58,4 @@ public class GraphicRenderer {
         int blue = Integer.parseInt(raw[2]);
         return new Color(red, green, blue);
     }
-
 }
