@@ -15,6 +15,57 @@ public class DotGen {
     private final int width = 500;
     private final int height = 500;
     private final int square_size = 20;
+    public Structs.Mesh generate1() {
+        Mesh2 mesh = new Mesh2();
+        List<Point>vertices = new ArrayList<>();
+        // Create all the vertices
+        for (int x = 0; x < width; x += square_size) {
+            for (int y = 0; y < height; y += square_size) {
+                Point p1 = new Point(x, y);
+                Point p2 = new Point(x, y + square_size);
+                Point p3 = new Point(x + square_size, y + square_size);
+                Point p4 = new Point(x + square_size, y);
+                vertices.add(p1);
+                vertices.add(p2);
+                vertices.add(p3);
+                vertices.add(p4);
+                Polygon polygon = new Polygon(vertices);
+                mesh.addPolygon(polygon);
+                vertices.clear();
+            }
+        }
+
+        Random bag = new Random();
+        for (Point p : mesh.getVertices()) {
+            int red = bag.nextInt(255);
+            int green = bag.nextInt(255);
+            int blue = bag.nextInt(255);
+            int alpha = bag.nextInt(255);
+            String colorCode = red + "," + green + "," + blue + "," + alpha;
+            p.setColor(colorCode);
+        }
+
+        for (Segment s : mesh.getSegments()) {
+            int red = bag.nextInt(255);
+            int green = bag.nextInt(255);
+            int blue = bag.nextInt(255);
+            int alpha = bag.nextInt(255);
+            String colorCode = red + "," + green + "," + blue + "," + alpha;
+            s.setColor(colorCode);
+        }
+
+        for (Polygon polygon:mesh.getPolygons()){
+            mesh.addVertex(polygon.getCentroid());
+            for (Point p: polygon.getVertices()) {
+                mesh.addVertex(p);
+            }
+            for (Segment s : polygon.getSegments()) {
+                mesh.addSegment(s);
+            }
+        }
+
+        return mesh.transform();
+    }
 
     public Mesh generate() {
         MeshADT mesh = new MeshADT();
@@ -44,59 +95,10 @@ public class DotGen {
 //                vertices.add(Vertex.newBuilder().setX((double) x).setY((double) y+square_size).build());
 //                vertices.add(Vertex.newBuilder().setX((double) x+square_size).setY((double) y+square_size).build());
             }
-            public Structs.Mesh generate() {
-                Mesh2 mesh = new Mesh2();
-                List<Point>vertices = new ArrayList<>();
-                // Create all the vertices
-                for (int x = 0; x < width; x += square_size) {
-                    for (int y = 0; y < height; y += square_size) {
-                        Point p1 = new Point(x, y);
-                        Point p2 = new Point(x, y + square_size);
-                        Point p3 = new Point(x + square_size, y + square_size);
-                        Point p4 = new Point(x + square_size, y);
-                        vertices.add(p1);
-                        vertices.add(p2);
-                        vertices.add(p3);
-                        vertices.add(p4);
-                        Polygon polygon = new Polygon(vertices);
-                        mesh.addPolygon(polygon);
-                        vertices.clear();
-                    }
-                }
 
-                Random bag = new Random();
-                for (Point p : mesh.getVertices()) {
-                    int red = bag.nextInt(255);
-                    int green = bag.nextInt(255);
-                    int blue = bag.nextInt(255);
-                    int alpha = bag.nextInt(255);
-                    String colorCode = red + "," + green + "," + blue + "," + alpha;
-                    p.setColor(colorCode);
-                }
-
-                for (Segment s : mesh.getSegments()) {
-                    int red = bag.nextInt(255);
-                    int green = bag.nextInt(255);
-                    int blue = bag.nextInt(255);
-                    int alpha = bag.nextInt(255);
-                    String colorCode = red + "," + green + "," + blue + "," + alpha;
-                    s.setColor(colorCode);
-                }
-
-                for (Polygon polygon:mesh.getPolygons()){
-                    mesh.addVertex(polygon.getCentroid());
-                    for (Point p: polygon.getVertices()) {
-                        mesh.addVertex(p);
-                    }
-                    for (Segment s : polygon.getSegments()) {
-                        mesh.addSegment(s);
-                    }
-                }
-
-                return mesh.transform();
-            }
 
         }
+
 
 //        List<Vertex> verticesWithColors = vertexInitialize(width,height,square_size);
 //
