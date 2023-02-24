@@ -72,3 +72,4 @@ When you develop features and enrich the product, remember that you have first t
 |F05 | GetCentroid| Jiaming Li | 2/15 | 2/15 | D |
 |F06 | GetNeighbours| Jiaming Li | 2/15 | 2/15 | D |
 |F07 | SetColor| Jiaming Li | 2/17 | 2/18 | D |
+|F08 | ID | Jiaming Li| 2/23 | 2/24 | D |
