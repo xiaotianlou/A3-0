@@ -86,6 +86,9 @@ public class Mesh2 {
     }
 
 
+
+
+
     public Structs.Mesh transform() {
         Set<Structs.Vertex> verts = new HashSet<>();
         Set<Structs.Segment> segs = new HashSet<>();
@@ -121,6 +124,8 @@ public class Mesh2 {
 
     public Structs.Mesh transform_DEBUG() {
         //debug mode
+
+
 
 
 
