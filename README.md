@@ -90,16 +90,20 @@ When you develop features and enrich the product, remember that you have first t
 |F08 | GetCentroid| Jiaming Li | 2/15 | 2/15 | D |
 |F09 | GetNeighbours| Jiaming Li | 2/15 | 2/15 | D |
 |F10 | SetColor| Changhao Wu | 2/17 | 2/18 | D |
-|F11 | id | Changhao Wu | 2/23 | 2/24 | D |
-|F12 | transform | Changhao Wu Jiaming Li | 2/23 | 2/24 | D |
-|F13 | UML | xiaotian Lou | 2/25 | 2/27 | D |
-|F14 | Cli | xiaotian Lou | 2/25 | 2/27 | D |
-|F15 | draw segment | xiaotian Lou | 2/10 | 2/15 | D |
-|F16 | visulization | xiaotian Lou | 2/10 | 2/15 | D |
-|F17 | visulizationDEbug | xiaotian Lou | 2/10 | 2/15 | D |
-|F18 | runconfig | xiaotian Lou | 2/10 | 2/15 | D |
-|F19 | SwitchMode | xiaotian Lou | 2/10 | 2/15 | D |
-|F20 | Foundneighbourindebug | xiaotian Lou | 2/10 | 2/15 | D |
-|F21 | addthcikness | xiaotian Lou | 2/10 | 2/15 | D |
-|F22 | addAlphaimplement | xiaotian Lou | 2/10 | 2/15 | D |
-|F22 | Bonus | xiaotian Lou | 2/26 | 2/27 | D |
+|F11 | Apply Lloyd relaxation | Changhao Wu | 2/23 | 2/24 | D |
+|F12 | Generate random points | Changhao Wu | 2/23 | 2/24 | D |
+|F13 | Compute the Voronoi Diagram of | Changhao Wu | 2/24 | 2/24 | D |
+|F14 | Crop the mesh to the expected size | Changhao Wu | 2/24 | 2/25 | D |
+|F15 | reorder its segments | Changhao Wu | 2/25 | 2/26 | D |
+|F16 | transform | Changhao Wu Jiaming Li | 2/23 | 2/24 | D |
+|F17 | UML | xiaotian Lou | 2/25 | 2/27 | D |
+|F18 | Cli | xiaotian Lou | 2/25 | 2/27 | D |
+|F19 | draw segment | xiaotian Lou | 2/10 | 2/15 | D |
+|F20 | visulization | xiaotian Lou | 2/10 | 2/15 | D |
+|F21 | visulizationDEbug | xiaotian Lou | 2/10 | 2/15 | D |
+|F22 | runconfig | xiaotian Lou | 2/10 | 2/15 | D |
+|F23 | SwitchMode | xiaotian Lou | 2/10 | 2/15 | D |
+|F24 | Foundneighbourindebug | xiaotian Lou | 2/10 | 2/15 | D |
+|F25 | addthcikness | xiaotian Lou | 2/10 | 2/15 | D |
+|F26 | addAlphaimplement | xiaotian Lou | 2/10 | 2/15 | D |
+|F27 | Bonus | xiaotian Lou | 2/26 | 2/27 | D |
