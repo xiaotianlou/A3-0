@@ -5,6 +5,7 @@ import ca.mcmaster.cas.se2aa4.a2.generator.specification.SpecificationFactory;
 import ca.mcmaster.cas.se2aa4.a2.io.MeshFactory;
 import featureRenderer.LagoonRenderer;
 import featureRenderer.Renderer;
+import Importer.Importer;
 
 import java.io.IOException;
 
@@ -20,5 +21,8 @@ public class Main {
         Mesh theMesh = specification.build();
         Renderer mvp = new LagoonRenderer(theMesh);
         new MeshFactory().write(mvp.Rendering(), "og.mesh");
+        Importer importer = new Importer();
+        importer.trans();
+
     }
 }
