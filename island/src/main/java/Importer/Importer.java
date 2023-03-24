@@ -49,6 +49,9 @@ public class Importer {
                 polygon.add(pov.contents()[0]);
                 polygon.add(pov.contents()[1]);
             }
+            for (int idx : p.getNeighborIdxsList()) {
+                polygon.registerAsNeighbour(mesh.getPolygons().toArray(new Polygon[0])[idx]);
+            }
             mesh.register(polygon);
         }
 
