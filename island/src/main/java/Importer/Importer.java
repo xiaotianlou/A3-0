@@ -13,11 +13,11 @@ import java.util.*;
 
 
 public class Importer {
-    public Mesh trans() {
+    public Mesh trans(String address) {
         MeshFactory fac = new MeshFactory();
         Structs.Mesh Rmesh = null;
         try {
-            Rmesh = fac.read("og.mesh");
+            Rmesh = fac.read(address);
         } catch (IOException e) {
             e.printStackTrace();
         }
