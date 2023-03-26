@@ -25,7 +25,7 @@ public class Main {
 
         MeshADT meshADT = new MeshADT();
 //        String input = "IOArea/inputoff.mesh";
-        String input_c="C:\\Users\\LENOVO\\Desktop\\a2---mesh-generator-team-28\\IOArea\\full_color.mesh";
+        String input_c="IOArea/inputoffC.mesh";
         Structs.Mesh aMesh = new MeshFactory().read(input_c);
 
         Importer polygonImporter = new polygonImporter();
@@ -37,7 +37,7 @@ public class Main {
         Structs.Mesh output= meshADT.toMesh();
 
 
-        new MeshFactory().write(output, "IOArea/outputC.mesh");//
+        new MeshFactory().write(output, "IOArea/outputC2.mesh");//
 
 
 

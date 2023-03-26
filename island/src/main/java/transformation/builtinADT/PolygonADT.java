@@ -9,7 +9,7 @@ import java.util.List;
 
 public class PolygonADT {
 //    private final MeshADT mesh;
-    private int[] color = new int[]{0,0,0};
+    private int[] color = new int[]{255,255,255};
     private List<PolygonADT> polygons;
     private List<SegmentADT> segments;
     private List<VertexADT> vertices;
@@ -70,7 +70,7 @@ public class PolygonADT {
     }
 
     public String getColorCode() {
-        return "red"+color[0]+","+color[1]+","+color[2];
+        return color[0]+","+color[1]+","+color[2];
     }
 
     public List<VertexADT> getVertices() {
@@ -144,13 +144,14 @@ public class PolygonADT {
         }
         Structs.Property.Builder propertyBuilder = Structs.Property.newBuilder();
 
-        builder.addProperties(propertyBuilder.setValue("rgb_color").setValue(getColorCode()));
+        builder.addProperties(propertyBuilder.setKey("rgb_color").setValue(getColorCode()));
 
-        builder.addProperties(propertyBuilder.setValue("elevation").setValue(String.valueOf(elevation)));
 
-        builder.addProperties(propertyBuilder.setValue("temperature").setValue(String.valueOf("0")));
+        builder.addProperties(propertyBuilder.setKey("elevation").setValue(String.valueOf(elevation)));
 
-        builder.addProperties(propertyBuilder.setValue("waterContent").setValue("0"));
+        builder.addProperties(propertyBuilder.setKey("temperature").setValue(String.valueOf("0")));
+
+        builder.addProperties(propertyBuilder.setKey("waterContent").setValue("0"));
 
         builder.setCentroidIdx(centroid.id);
 

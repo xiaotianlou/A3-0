@@ -27,7 +27,8 @@ public class polygonImporter implements Importer{
                 }
             }
             PolygonADT polygonADT = meshADT.getPolygon(vertices,segments,centroid);
-            for (int n = mesh.getPropertiesCount();n>0;n--){
+            for (int n = p.getPropertiesCount();n>0;n--){
+
                 if (n == 1){
                     polygonADT.setColor(p.getProperties(0).getValue());
                 }
