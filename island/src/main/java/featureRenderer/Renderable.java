@@ -1,8 +1,7 @@
 package featureRenderer;
 
 import Reproducibility.Seed;
-import ca.mcmaster.cas.se2aa4.a2.generator.adt.Mesh;
-import ca.mcmaster.cas.se2aa4.a2.io.Structs;
+import transformation.builtinADT.MeshADT;
 
 /**
  * @author loux8@mcmaster.ca
@@ -10,5 +9,5 @@ import ca.mcmaster.cas.se2aa4.a2.io.Structs;
  */
 public interface Renderable {
 
-    Mesh Rendering(Mesh m, Seed seed);
+    MeshADT Rendering(MeshADT m, Seed seed);
 }

@@ -3,6 +3,7 @@ package featureRenderer;
 import Reproducibility.Seed;
 import ca.mcmaster.cas.se2aa4.a2.generator.adt.Mesh;
 import ca.mcmaster.cas.se2aa4.a2.io.Structs;
+import transformation.builtinADT.MeshADT;
 
 /**
  * @author loux8@mcmaster.ca
@@ -12,7 +13,7 @@ public class ElevationRenderer implements Renderable{
 
 
     @Override
-    public Mesh Rendering(Mesh m, Seed seed) {
+    public MeshADT Rendering(MeshADT m, Seed seed) {
         return null;
     }
 }
