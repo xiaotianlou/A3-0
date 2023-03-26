@@ -1,11 +1,5 @@
-import ca.mcmaster.cas.se2aa4.a2.generator.adt.Mesh;
-import ca.mcmaster.cas.se2aa4.a2.generator.configuration.Configuration;
-import ca.mcmaster.cas.se2aa4.a2.generator.specification.Buildable;
-import ca.mcmaster.cas.se2aa4.a2.generator.specification.SpecificationFactory;
 import ca.mcmaster.cas.se2aa4.a2.io.MeshFactory;
 import ca.mcmaster.cas.se2aa4.a2.io.Structs;
-import featureRenderer.LagoonRenderer;
-import featureRenderer.Renderer;
 import transformation.builtinADT.MeshADT;
 import transformation.importation.Importer;
 import transformation.importation.polygonImporter;
@@ -13,7 +7,6 @@ import transformation.importation.segmentImporter;
 import transformation.importation.vertexImporter;
 
 import java.io.IOException;
-import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) throws IOException {

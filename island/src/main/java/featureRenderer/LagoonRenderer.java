@@ -7,7 +7,6 @@ import ca.mcmaster.cas.se2aa4.a2.generator.export.Exporter;
 import ca.mcmaster.cas.se2aa4.a2.generator.export.enricher.BackGroundEnricher;
 import ca.mcmaster.cas.se2aa4.a2.generator.export.enricher.CircleIslandEnricher;
 import ca.mcmaster.cas.se2aa4.a2.io.Structs;
-import featureRenderer.Renderer;
 
 import java.awt.*;
 import java.util.ArrayList;

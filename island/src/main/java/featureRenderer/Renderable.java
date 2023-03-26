@@ -8,5 +8,6 @@ import ca.mcmaster.cas.se2aa4.a2.io.Structs;
  * @date 2023/3/24 11:18
  */
 public interface Renderable {
+
     Mesh Rendering(Mesh m);
 }
