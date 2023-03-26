@@ -14,6 +14,17 @@ public class PolygonADT {
     private List<SegmentADT> segments;
     private List<VertexADT> vertices;
     private boolean isIsland = false;
+    private Biome biome = Biome.None;
+    private VertexADT centroid;
+    private int elevation = 0;
+    private Aquifer waterContent;
+    private int temperature = 25;
+    public PolygonADT(List<SegmentADT> segments, List<VertexADT> vertices, VertexADT centroid, int id) {
+        this.segments = segments;
+        this.vertices = vertices;
+        this.id = id;
+        this.centroid = centroid;
+    }
 
     public Biome getBiome() {
         return biome;
@@ -21,23 +32,6 @@ public class PolygonADT {
 
     public void setBiome(Biome biome) {
         this.biome = biome;
-    }
-
-    private Biome biome=Biome.None;
-
-
-
-
-    private VertexADT centroid;
-    private int elevation = 0;
-    private Aquifer waterContent;
-    private int temperature = 25;
-
-    public PolygonADT(List<SegmentADT> segments, List<VertexADT> vertices, VertexADT centroid, int id) {
-        this.segments = segments;
-        this.vertices = vertices;
-        this.id = id;
-        this.centroid = centroid;
     }
 
     public int getId() {

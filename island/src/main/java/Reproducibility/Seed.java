@@ -1,16 +1,23 @@
 package Reproducibility;
 
+
 import java.util.HashMap;
 
 public class Seed {
 
-    HashMap seed;
+    public int getSeed() {
+        return seed;
+    }
+
+    private int seed;
 
     public Seed(){
-        seed = new HashMap<>();
-
-
+        seed = 774123;
     }
+    public Seed(int seed){
+        this.seed = seed;
+    }
+
 
 
 
