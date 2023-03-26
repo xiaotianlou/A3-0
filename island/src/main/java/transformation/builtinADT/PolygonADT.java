@@ -19,11 +19,22 @@ public class PolygonADT {
     private int elevation = 0;
     private Aquifer waterContent;
     private int temperature = 25;
+    private int humidity;
+
+
+
     public PolygonADT(List<SegmentADT> segments, List<VertexADT> vertices, VertexADT centroid, int id) {
         this.segments = segments;
         this.vertices = vertices;
         this.id = id;
         this.centroid = centroid;
+    }
+    public int getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(int humidity) {
+        this.humidity = humidity;
     }
 
     public Biome getBiome() {
