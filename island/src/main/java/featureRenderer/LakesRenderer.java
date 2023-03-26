@@ -1,5 +1,6 @@
 package featureRenderer;
 
+import Reproducibility.Seed;
 import ca.mcmaster.cas.se2aa4.a2.generator.adt.Mesh;
 import ca.mcmaster.cas.se2aa4.a2.io.Structs;
 
@@ -8,8 +9,10 @@ import ca.mcmaster.cas.se2aa4.a2.io.Structs;
  * @date 2023/3/23 16:15
  */
 public class LakesRenderer implements Renderable {
+
+
     @Override
-    public Mesh Rendering(Mesh m) {
+    public Mesh Rendering(Mesh m, Seed seed) {
         return null;
     }
 }
