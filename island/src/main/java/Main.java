@@ -25,7 +25,7 @@ public class Main {
 
         MeshADT meshADT = new MeshADT();
 //        String input = "IOArea/inputoff.mesh";
-        String input_c="IOArea/inputoffC.mesh";
+        String input_c="IOArea/inputoffCE.mesh";
         Structs.Mesh aMesh = new MeshFactory().read(input_c);
 
         Importer polygonImporter = new polygonImporter();
@@ -37,7 +37,7 @@ public class Main {
         Structs.Mesh output= meshADT.toMesh();
 
 
-        new MeshFactory().write(output, "IOArea/outputC2.mesh");//
+        new MeshFactory().write(output, "IOArea/outputC2333333333.mesh");//
 
 
 
